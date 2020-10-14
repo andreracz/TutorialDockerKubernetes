@@ -1,0 +1,12 @@
+apiVersion: v1 # Obrigatorio, versão da API do Kubernetes que contém esse recursos
+kind: Service # Tipo de objeto a ser criado
+metadata:
+  name: pod-info-service  # Nome do service
+spec:
+  type: LoadBalancer # Tipo de Serviço. Os mais comuns são ClusterIP e LoadBalancer
+  selector: # Indica quais pods serão roteadas por este service
+    app: pod-info
+  ports: # Portas que o serviço irá expor
+    - protocol: TCP # Protocolo (TCP ou UDP)
+      port: 80 # Porta que será exposta para o mundo
+      targetPort: 9898 # Porta da pod que será roteada
