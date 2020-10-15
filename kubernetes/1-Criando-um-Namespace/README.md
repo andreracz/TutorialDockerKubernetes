@@ -9,7 +9,7 @@ Vamos mostrar duas formas de criar um namespace, uma usando somente linha de com
 Para criar um namespace usando apenas a linha de comando, o comando é:
 
 ```Powershell
-kubectl create namespace my-fist-namespace
+kubectl create namespace my-first-namespace
 ```
 
 O comando acima cria um namespace chamado my-first-namespace, que pode ser listado com o comando:

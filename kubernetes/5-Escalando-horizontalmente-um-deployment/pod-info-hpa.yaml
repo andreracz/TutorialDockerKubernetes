@@ -12,7 +12,7 @@ spec: # Especificação do recurso
   metrics: # Metrica usada para escalar
   - type: Resource # Tipo de métrica
     resource: # Recurso usado
-      name: cpu # EScalar por CPU, quando a utilização média estiver acima de 50%
+      name: cpu # Escalar por CPU, quando a utilização média estiver acima de 50%
       target:
         type: Utilization
         averageUtilization: 50

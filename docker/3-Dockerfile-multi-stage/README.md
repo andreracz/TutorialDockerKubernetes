@@ -23,6 +23,7 @@ RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS runtime
 WORKDIR /app
+EXPOSE 80
 COPY --from=build /app/out ./
 ENTRYPOINT ["dotnet", "my-container-app.dll"]
 ```
@@ -39,6 +40,7 @@ Os comandos que utilizamos em nosso Dockerfile foram:
 - Container de Runtime:
   - ```FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS runtime```: Cria uma novo container, com apelido de "runtime", usando apenas o runtime do .Net.
   - ```WORKDIR /app```: Muda o diretório de trabalho para /app
+  - ```EXPOSE 80```: Determina qual porta o Container expõe
   - ```COPY --from=build /app/out ./```: Copia os arquivos do diretório /app/out do container de build para o container de runtime
   - ```ENTRYPOINT ["dotnet", "my-container-app.dll"]```: Determina o comando que vai ser rodado quando o container subir, para rodar a aplicação.
 
