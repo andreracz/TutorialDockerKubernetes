@@ -29,6 +29,6 @@ Para montar o ambiente, os seguinte comandos devem ser rodados no bash, com o Az
 6. Criar ACR: ```az acr create -g $RESOURCEGROUPNAME --name $ACRNAME --sku basic --admin-enabled true```
 7. Criar AKS: ```az aks create -g $RESOURCEGROUPNAME --name $AKSNAME --node-count 1 --attach-acr $ACRNAME --generate-ssh-keys```
 8. Conectar com o AKS localmente: ```az aks get-credentials -g $RESOURCEGROUPNAME --name $AKSNAME --file  ~/.kube/config --overwrite-existing```
-9. Obter o token do ACR: ACRTOKEN=$(az acr credential show -n $ACRNAME | jq -r .passwords[0].value)
-10. Logar no docker: sudo docker login $ACRNAME.azurecr.io --username $ACRNAME --password $ACRTOKEN
+9. Obter o token do ACR: ```ACRTOKEN=$(az acr credential show -n $ACRNAME | jq -r .passwords[0].value)```
+10. Logar no docker: ```docker login $ACRNAME.azurecr.io --username $ACRNAME --password $ACRTOKEN```
 11. Testar a conexão com o AKS: ```kubectl get namespace```, deverá listar os namespaces
