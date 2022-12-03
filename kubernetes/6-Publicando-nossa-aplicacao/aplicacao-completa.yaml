@@ -44,7 +44,7 @@ spec:
       targetPort: 80 # Porta da pod que será roteada
 
 ---
-apiVersion: autoscaling/v2beta2 # Obrigatorio, versão da API do Kubernetes que contém esse recursos
+apiVersion: autoscaling/v2 # Obrigatorio, versão da API do Kubernetes que contém esse recursos
 kind: HorizontalPodAutoscaler # Tipo de recurso (HPA)
 metadata:
   name: weather-forecast-hpa #Nome do recurso
