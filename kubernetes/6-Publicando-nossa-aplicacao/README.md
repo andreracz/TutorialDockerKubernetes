@@ -50,7 +50,7 @@ spec:
       targetPort: 80 # Porta da pod que será roteada
 
 ---
-apiVersion: autoscaling/v2beta2 # Obrigatorio, versão da API do Kubernetes que contém esse recursos
+apiVersion: autoscaling/v2 # Obrigatorio, versão da API do Kubernetes que contém esse recursos
 kind: HorizontalPodAutoscaler # Tipo de recurso (HPA)
 metadata:
   name: weather-forecast-hpa #Nome do recurso
@@ -73,7 +73,7 @@ spec: # Especificação do recurso
 Para aplicar esse arquivo no cluster, deve-se usar o comando apply, passando-se o arquivo e o nome do namespace onde será rodado.
 
 ```Powershell
-kubectl apply -f .\aplicacao-completa.yaml --namespace=my-namespace
+kubectl apply -f aplicacao-completa.yaml --namespace=my-namespace
 ```
 
 Para listar os recursos criado, pode-se usar os comandos:
