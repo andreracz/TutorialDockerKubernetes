@@ -6,7 +6,7 @@ Vamos agora mostrar como um HorizontalPodAutoscaler (HPA) pode ser utilizado par
 A criação de Services é feita utilizando-se arquivos YAML, como o que está listado a seguir:
 
 ```YAML
-apiVersion: autoscaling/v2beta2 # Obrigatorio, versão da API do Kubernetes que contém esse recursos
+apiVersion: autoscaling/v2 # Obrigatorio, versão da API do Kubernetes que contém esse recursos
 kind: HorizontalPodAutoscaler # Tipo de recurso (HPA)
 metadata:
   name: pod-info-hpa #Nome do recurso
@@ -29,7 +29,7 @@ spec: # Especificação do recurso
 Para aplicar esse arquivo no cluster, deve-se usar o comando apply, passando-se o arquivo e o nome do namespace onde será rodado.
 
 ```Powershell
-kubectl apply -f .\pod-info-hpa.yaml --namespace=my-namespace
+kubectl apply -f pod-info-hpa.yaml --namespace=my-namespace
 ```
 
 Para listar o recurso criado, deve-se rodar o comando:
