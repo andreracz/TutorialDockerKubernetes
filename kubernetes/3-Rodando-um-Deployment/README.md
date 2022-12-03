@@ -41,7 +41,7 @@ spec: # contém as especificações do deployment pod, como os containers que ir
 Para aplicar esse arquivo no cluster, deve-se usar o comando apply, passando-se o arquivo e o nome do namespace onde será rodado.
 
 ```Powershell
-kubectl apply -f .\pod-info-deployment.yaml --namespace=my-namespace
+kubectl apply -f pod-info-deployment.yaml --namespace=my-namespace
 ```
 
 Para listar as Pods, deve-se rodar o comando:
