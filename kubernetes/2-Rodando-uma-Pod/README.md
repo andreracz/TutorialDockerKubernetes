@@ -32,7 +32,7 @@ spec: # contém as especificações da pod, como os containers que irão rodar, 
 Para aplicar esse arquivo no cluster, deve-se usar o comando apply, passando-se o arquivo e o nome do namespace onde será rodado.
 
 ```Powershell
-kubectl apply -f .\getting-started.yaml --namespace=my-namespace
+kubectl apply -f getting-started.yaml --namespace=my-namespace
 ```
 
 Para listar as Pods, deve-se rodar o comando:
