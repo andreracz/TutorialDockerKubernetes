@@ -16,8 +16,8 @@ Para rodar estes exemplos, é necessário:
 2. Ter o [Azure Cli](https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli?view=azure-cli-latest) instalado
 3. Estar com o Azure cli logado na conta que deve ser utilizado e utilizando a subscription correta
 4. Ter o [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) instalado
-5. Ter o [Docker Desktop](https://www.docker.com/products/docker-desktop) instalado, e configurado.
-6. Garantir que seu Docker está configurado para rodar [Containers Linux](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers)
+5. Ter o [Docker Desktop](https://www.docker.com/products/docker-desktop) instalado, e configurado no Windows, ou uma distribuição do Docker no Linux (pode ser o WSL).
+6. Se for Windows, garantir que seu Docker está configurado para rodar [Containers Linux](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers)
 7. [Criar um cluster AKS e registro ACR](ambiente/1-Criando-um-cluster-AKS/README.md)
 
 
