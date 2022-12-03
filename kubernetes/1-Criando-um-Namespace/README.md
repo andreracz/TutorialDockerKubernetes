@@ -33,7 +33,7 @@ metadata:
 Para criar o namespace, deve-se utilizar o seguinte comando:
 
 ```Powershell
-kubectl apply -f .\my-namespace.yaml
+kubectl apply -f my-namespace.yaml
 ```
 
 O Comando apply cria ou altera um recurso, de acordo com o arquivo passado. Pode-se utilizar também o comando create, que apenas cria um objeto, não modificando caso ele exista.
